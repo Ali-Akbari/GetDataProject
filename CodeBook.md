@@ -22,9 +22,17 @@ It is important to notice the order of process is different from original sugges
  - Only required columns are copied to `SelectedData` object
  - `melt` and `dcast` functions are used to clean and summarize data to the final data structure, `TidyData`
  - Finally result is written to the file `"TidyData.txt"`
+ 
+ ##Important intermediate data##
+ - AllData: Contains all of the codes and measurements after merging the tables
+ - SelectedData: Result after removing unwanted columns
+ - MeltData: intermediate result after meltdown and ready for reshaping
+ - TidyData: Final summarized data including average of selected variables for each pair of Subject-Activity
 
 ##Data description##
-Here are the variable names of the final data table that is saved to the disk:
+Here are the variable names of the final data table that is saved to the disk.
+
+The first two columns are test Subject and Activity ID respectively and the rest are containing the average of the mentioned measurement calculated in that group of Subject-Activity.
 
  (1) "Subject_id"                 
  (2) "Activity_id"                
